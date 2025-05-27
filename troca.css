@@ -1,0 +1,223 @@
+/* RESET */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(imagem/cntroca.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    background-color: #258899;
+    padding: 70px 0;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin-top: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+h3 {
+    margin: 20px 0;
+    font-size: 1.2em;
+    text-align: center;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+footer {
+    background-color: #1b6875;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;
+}
+strong{
+    color: rgb(36, 74, 199);
+    font-family: 'Courier New', Courier, monospace;
+}
+/* MENU HAMBURGUER */
+.menu-hamburguer {
+    font-size: 28px;
+    cursor: pointer;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: 1001;
+    color: white;
+}
+
+/* MENU LATERAL */
+.menu-lateral {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100vh;
+    background-color: #258899;
+    padding-top: 70px;
+    transition: 0.3s;
+    z-index: 1000;
+    overflow-y: auto;
+    transform: translateX(-100%);
+}
+
+.menu-lateral.ativo {
+    transform: translateX(0);
+}
+
+.menu-lateral ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-lateral ul li {
+    padding: 15px 20px;
+}
+
+.menu-lateral ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-lateral ul li a:hover {
+    text-decoration: underline;
+}
+
+/* CONTAINER PRINCIPAL */
+.container {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+    background: transparent;
+    border-radius: 10px;
+}
+
+.header img.logo-cn {
+    max-width: 150px;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+.filmes {
+    background-color: rgba(255, 255, 255, 0.847);
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 
+        -1px 12px 0 0 black,  /* inferior esquerda */
+         1px -1px 0 0 black; /* superior direita */
+}
+
+.filmes p {
+    width: 400px;
+    margin: 10px 0;
+    font-size: 21px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold; /* <-- AQUI: deixa a letra mais grossa */
+    color: rgb(24, 23, 23);
+    border-radius: 10px;
+}
+
+
+input[type="text"] {
+    outline-color: black;
+    margin: 15px 0;
+    padding: 10px;
+    width: 80%;
+    max-width: 300px;
+     box-shadow: 
+        -1px 6px 0 0 black,  /* inferior esquerda */
+         1px -1px 0 0 black; /* superior direita */
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+}
+button {
+  /* Variables */
+  --button_radius: 0.75em;
+  --button_color: #ffe433;
+  --button_outline_color: #000000;
+  font-size: 17px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--button_radius);
+  background: var(--button_outline_color);
+}
+
+.button_top {
+  display: block;
+  box-sizing: border-box;
+  border: 2px solid var(--button_outline_color);
+  border-radius: var(--button_radius);
+  padding: 0.75em 1.5em;
+  background: var(--button_color);
+  color: var(--button_outline_color);
+  transform: translateY(-0.2em);
+  transition: transform 0.1s ease;
+}
+
+button:hover .button_top {
+  /* Pull the button upwards when hovered */
+  transform: translateY(-0.33em);
+}
+
+button:active .button_top {
+  /* Push the button downwards when pressed */
+  transform: translateY(0);
+}
+
+/* .botoes {
+    margin-top: 10px;
+}
+
+.botoes button {
+    margin: 5px;
+    padding: 10px 20px;
+    background-color: #f7cb2d;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.botoes button:hover {
+    background-color: #d82b6d;
+} */
+
+/* RESPONSIVIDADE */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .filmes p {
+        font-size: 1em;
+    }
+}

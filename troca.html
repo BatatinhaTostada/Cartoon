@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartoon Desenhos</title>
+    <link rel="stylesheet" href="troca.css">
+</head>
+<body>
+
+    <header>
+        <div class="menu-hamburguer" onclick="toggleMenu()">☰</div>
+    </header>
+
+    <nav id="menu-lateral" class="menu-lateral">
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="horadeaventura.html">Quiz - Hora de Aventura</a></li>
+            <li><a href="meninasp.html">Quiz - As Meninas Superpoderosas</a></li>
+            <li><a href="gumball.html">Quiz - Incrível Mundo de <div class="gumball">Gumball</div></a></li>
+            <li><a href="jogodavelha.html">Jogo da Velha</a></li>
+            <li><a href="forca.html">Jogo da Forca</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="header">
+            <img src="imagem/cn logo.png" width="100px" class="logo-cn">
+            <h1>Cartoon Desenho</h1>
+        </div>
+
+        <h3>Troque uma palavra e transforme os Desenhos!</h3>
+
+        <div class="filmes">
+            <p>A hora de <strong id="Filme_1" class="filme">aventura</strong></p>
+            <p>O incrível <strong id="Filme_2" class="filme">mundo </strong> de Gumball</p>
+            <p>Steven <strong id="Filme_3" class="filme">universo</strong></p>
+            <p>Meninas <strong id="Filme_4" class="filme">super</strong>poderosas</p>
+            <p>Titio <strong id="Filme_5" class="filme">avô</strong></p>
+        </div>
+        <input type="text" id="palavra" placeholder="Digite uma palavra divertida">
+        <br><br>
+            <button>
+                <span onclick="GAME_WORD()" class="button_top">Explodir numeros</span>
+            </button>
+            <br><br>
+            <button>
+                <span onclick="resetar()" class="button_top">Resetar</span>
+            </button>
+    </main>
+
+    <footer>
+        Todos os direitos reservados para Isa e Rafa ©
+    </footer>
+
+    <script src="troca.js"></script>
+</body>
+</html>

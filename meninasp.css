@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(imagem/asmeninassuperpoderosas.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    width: 100%;
+    background-color: #e01d3b;
+    padding: 70px 0;
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 2em;
+}
+footer {
+    background-color: #cc1833;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+.conteudo-central {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: rgb(255, 255, 255);
+}
+.opcao.vermelho {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #e8d9e0;
+    background-color: rgb(253, 4, 0);
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #a70a0a;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #c40d0d;
+}
+.opcao.verde {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #dbe8d9;
+    background-color: rgb(52, 191, 52);
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #2e8419;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #2e8419;
+}
+.opcao.azul {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #d9e3e8;
+    background-color: rgb(37, 139, 234);
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #0162b1;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #0162b1;
+}
+
+.opcao.vermelho:hover {
+    box-shadow: inset 0 -100px 0 0  #e00909;
+    color: white;  
+}
+.opcao.verde:hover {
+    box-shadow: inset 0 -100px 0 0 #2eb82e;
+    color: white;
+}
+.opcao.azul:hover {
+    box-shadow: inset 0 -100px 0 0 #0385db;
+    color: white;
+}
+
+.container-pergunta {
+    background-color: rgba(235, 109, 134, 0.726);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+.imagem-pergunta {
+    width: 300px;
+    height: 250px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+
+#opcoes button {
+    margin: 8px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#feedback {
+    margin-top: 15px;
+    font-size: 1.1em;
+    color: rgb(255, 255, 255);
+}
+
+/* menu hamburguer */
+.menu-hamburguer {
+    font-size: 28px;
+    cursor: pointer;
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 1001;
+}
+
+.menu-lateral {
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background-color: #e01d3b;
+    padding-top: 60px;
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.menu-lateral ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu-lateral ul li {
+    padding: 15px 20px;
+}
+
+.menu-lateral ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-lateral ul li a:hover {
+    text-decoration: underline;
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-hamburguer {
+        display: block;
+    }
+
+    header h1 {
+        margin-left: 50px; /* Dá espaço pro ícone hambúrguer */
+    }
+}
+
+/* botao */
+.botao {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 15px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #ffffff;
+    background: #cf1c46;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #7c1a2c;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #7c1a2c;
+  }
+  
+  .botao:hover {
+    color: rgb(255, 255, 255);
+    box-shadow: inset 0 -100px 0 0 #a1223a;
+  }
+  
+  button:active {
+    transform: scale(0.9);
+  }
+
